@@ -2,7 +2,8 @@ import enDayjsTranslations from "dayjs/locale/en";
 import plDayjsTranslations from "dayjs/locale/pl";
 import deDayjsTranslations from "dayjs/locale/de";
 import ltDayjsTranslations from "dayjs/locale/lt";
-import { en, pl, de, lt } from "@/locales";
+import fiDayjsTranslations from "dayjs/locale/fi";
+import { en, pl, de, lt, fi } from "@/locales";
 import { LocaleType } from "./types";
 
 export const localesData: LocaleType[] = [
@@ -11,6 +12,12 @@ export const localesData: LocaleType[] = [
     lang: en,
     translateCode: "en-GB",
     dayjsTranslations: enDayjsTranslations
+  },
+  {
+    id: "fi",
+    lang: fi,
+    translateCode: "fi-FI",
+    dayjsTranslations: fiDayjsTranslations
   },
   {
     id: "pl",
