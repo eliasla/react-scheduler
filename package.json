@@ -1,11 +1,11 @@
 {
-  "name": "@bitnoi.se/react-scheduler",
+  "name": "@eliasla/react-scheduler",
   "version": "0.3.2",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bitnoise/react-scheduler"
+    "url": "https://github.com/eliasla/react-scheduler"
   },
   "keywords": [
     "scheduler",
@@ -16,8 +16,8 @@
     "calendar"
   ],
   "author": {
-    "name": "Bitnoise",
-    "url": "https://scheduler.bitnoise.pl/"
+    "name": "Elias Laitinen",
+    "url": "https://github.com/eliasla"
   },
   "scripts": {
     "dev": "vite",
@@ -50,7 +50,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
-      "yarn run lint"
+      "npm run lint"
     ]
   },
   "dependencies": {
