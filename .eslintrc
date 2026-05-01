@@ -11,7 +11,14 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
-  "overrides": [],
+  "overrides": [
+  {
+    "files": ["*.d.ts"],
+    "rules": {
+      "filenames/match-exported": "off"
+    }
+  }
+],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {

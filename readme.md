@@ -1,5 +1,10 @@
+> Fork of [Bitnoise/react-scheduler](https://github.com/Bitnoise/react-scheduler).
+> Had to fork this due to original project seemingly stagnant.
+> - merged some fixes that were there waiting
+> - added finnish language support
+
 <div align="center">
-  <img src="logo.svg" style="height: 60px" alt="@bitnoise/react-scheduler">
+  <img src="logo.svg" style="height: 60px" alt="@eliasla/react-scheduler">
   <hr />
   <p align="center">
     ✨ <a href="https://scheduler.bitnoise.pl/">https://scheduler.bitnoise.pl/</a> ✨
@@ -9,31 +14,16 @@
   <div align="center">
     <a href="https://bit.ly/react_scheduler">Youtube Tutorial</a>
     <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-    <a href="https://www.npmjs.com/package/@bitnoi.se/react-scheduler">npm</a>
-    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-    <a href="https://github.com/Bitnoise/react-scheduler/issues/new">Report an issue</a>
+    <a href="https://www.npmjs.com/package/@eliasla/react-scheduler">npm</a>
   </div>
 </div>
 <hr />
 
-<div>
-  <h3 align="center">NEWSLETTER</h3>
-  <p>
-    If you want to stay updated with Scheduler updates and news from the technical world, sign up for our newsletter. We don't  spam (we send emails once a month), we don't run a sales newsletter, and we respect your time.
-  </p>
-  <p>
-  See for yourself: <a href="https://www.bitnoise.pl/newsletter">NEWSLETTER</a>
-  </p>
-</div>
-<hr/>
-
 ### Installation
 
 ```bash
-# yarn
-yarn add '@bitnoi.se/react-scheduler'
 # npm
-npm install '@bitnoi.se/react-scheduler'
+npm install '@eliasla/react-scheduler'
 ```
 
 ### Example usage
@@ -41,13 +31,13 @@ npm install '@bitnoi.se/react-scheduler'
 1. import required styles for scheduler
 
 ```ts
-import "@bitnoi.se/react-scheduler/dist/style.css";
+import "@eliasla/react-scheduler/dist/style.css";
 ```
 
 2. Import Scheduler component into your project
 
 ```ts
-import { Scheduler, SchedulerData } from "@bitnoi.se/react-scheduler";
+import { Scheduler, SchedulerData } from "@eliasla/react-scheduler";
 import dayjs from "dayjs";
 
 export default function Component() {
@@ -64,7 +54,7 @@ export default function Component() {
 
   // Filtering events that are included in current date range
   // Example can be also found on video https://youtu.be/9oy4rTVEfBQ?t=118&si=52BGKSIYz6bTZ7fx
-  // and in the react-scheduler repo App.tsx file https://github.com/Bitnoise/react-scheduler/blob/master/src/App.tsx
+  // and in the react-scheduler repo App.tsx file https://github.com/eliasla/react-scheduler/blob/master/src/App.tsx
   const filteredMockedSchedulerData = mockedSchedulerData.map((person) => ({
         ...person,
         data: person.data.filter(
@@ -294,14 +284,14 @@ item that will be visible on the grid as tile and that will be accessible as arg
 
 ### Troubleshooting
 
-- For using Scheduler with RemixJS make sure to add `@bitnoi.se/react-scheduler` to `serverDependenciesToBundle` in `remix.config.js` like so:
+- For using Scheduler with RemixJS make sure to add `@eliasla/react-scheduler` to `serverDependenciesToBundle` in `remix.config.js` like so:
 
 ```js
 // remix.config.js
 /** @type  {import('@remix-run/dev').AppConfig} */
 module.exports = {
 	// ...
-	serverDependenciesToBundle: [..., "@bitnoi.se/react-scheduler"],
+	serverDependenciesToBundle: [..., "@eliasla/react-scheduler"],
 };
 ```
 
@@ -309,7 +299,7 @@ module.exports = {
 
 ```ts
 "use client"
-import { Scheduler, SchedulerProps } from "@bitnoi.se/react-scheduler";
+import { Scheduler, SchedulerProps } from "@eliasla/react-scheduler";
 
 default export function SchedulerClient(props: SchedulerProps) {
 	return <Scheduler {...props} />;
@@ -321,7 +311,7 @@ default export function SchedulerClient(props: SchedulerProps) {
 
 ```ts
 import dynamic from "next/dynamic";
-const Scheduler = dynamic(() => import("@bitnoi.se/react-scheduler").then((mod) => mod.Scheduler), {
+const Scheduler = dynamic(() => import("@eliasla/react-scheduler").then((mod) => mod.Scheduler), {
   ssr: false
 });
 ```
@@ -351,8 +341,8 @@ export const StyledSchedulerFrame = styled.div`
 
 ### How to contribute
 
-- **Reporting Issues**: If you come across any bugs, glitches, or have any suggestions for improvements, please [open an issue](https://github.com/Bitnoise/react-scheduler/issues) on our GitHub repository. Provide as much detail as possible, including steps to reproduce the issue.
-- **Suggesting Enhancements**: If you have ideas for new features or enhancements, we would love to hear them! You can [open an issue](https://github.com/Bitnoise/react-scheduler/issues) on our GitHub repository and clearly describe your suggestion.
+- **Reporting Issues**: If you come across any bugs, glitches, or have any suggestions for improvements, please [open an issue](https://github.com/eliasla/react-scheduler/issues) on our GitHub repository. Provide as much detail as possible, including steps to reproduce the issue.
+- **Suggesting Enhancements**: If you have ideas for new features or enhancements, we would love to hear them! You can [open an issue](https://github.com/eliasla/react-scheduler/issues) on our GitHub repository and clearly describe your suggestion.
 - **Submitting Pull Requests**: If you have developed a fix or a new feature that you would like to contribute, you can submit a pull request. Here's a quick overview of the process:
   - Clone the repository and create your own branch: `git checkout -b feat/your-branch-name`.
   - Implement your changes, following the **code style and guidelines** from [development.md](development.md).
@@ -362,10 +352,14 @@ export const StyledSchedulerFrame = styled.div`
     - add at least 1 reviewer
     - link correct issue
 
-### Contact
+## Differences from upstream
 
-If you have any questions or need further assistance, feel free to reach out to us at [scheduler@bitnoi.se](mailto:scheduler@bitnoi.se). We appreciate your contributions and thank you for helping us improve this project!
+This fork currently includes:
+- Finnish translations
+- Merged some pull requests which were left unmerged and had bug fixes
 
 ### License
 
-MIT Licensed. Copyright (c) Bitnoise 2023.
+MIT Licensed.
+Original project Copyright (c) Bitnoise 2023.
+Fork modifications Copyright (c) Elias Laitinen 2026.
